@@ -26,7 +26,9 @@ namespace top
             transfer_out,
             transfer_in,
             give,
-            set_property
+            set_property,
+            publish_contract,
+            exec_contract
         };
         static std::unordered_map<std::string, xhttp_action> g_action_map = {\
         {"account_balance", account_balance},\
@@ -43,7 +45,9 @@ namespace top
         {"query_all_property", query_all_property},\
         {"give", give},\
         {"query_online_tx", query_online_tx},\
-        {"query_reward", query_reward}
+        {"query_reward", query_reward},\
+        {"publish_contract", publish_contract},\
+        {"exec_contract", exec_contract}
         };
         enum xhttp_error_code
         {
