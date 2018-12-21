@@ -48,11 +48,31 @@ namespace top
                     return query_online_tx(json_proc);
                 case xhttp_action::query_reward:
                     return query_reward(json_proc);
+                case xhttp_action::publish_contract:
+                    return publish_contract(json_proc);
+                case xhttp_action::exec_contract:
+                    return exec_contract(json_proc);
                 default:
                     xwarn("exception action %d", iter->second);
             }
             return true;
         }
+
+
+        int32_t xaction_manager::do_transaction(xjson_proc& json_proc)
+        {
+        }
+
+        bool xaction_manager::publish_contract(xjson_proc& json_proc)
+        {
+
+        }
+
+        bool xaction_manager::exec_contract(xjson_proc& json_proc)
+        {
+
+        }
+
         bool xaction_manager::query_balance(xjson_proc& json_proc)
         {
             std::string balance;

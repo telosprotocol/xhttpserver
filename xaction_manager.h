@@ -52,6 +52,9 @@ namespace top
             bool get_genesis_sign(std::shared_ptr<top::chain::xtransaction_t>& tx);
             bool query_online_tx(xjson_proc& json_proc);
             bool query_reward(xjson_proc& json_proc);
+            int32_t do_transaction(xjson_proc& json_proc);
+            bool publish_contract(xjson_proc& json_proc);
+            bool exec_contract(xjson_proc& json_proc);
             public:
             top::store::xstore_base* m_store_intf;
         };
